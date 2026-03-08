@@ -1,7 +1,7 @@
 //! Highlight group definition helpers.
 
 use nvim_oxi::api;
-use nvim_oxi::types::SetHighlightOpts;
+use nvim_oxi::api::opts::SetHighlightOpts;
 
 /// Builder for a Neovim highlight group.
 pub struct Highlight {
@@ -93,10 +93,10 @@ impl Highlight {
             opts.link(link.as_str());
         } else {
             if let Some(ref fg) = self.fg {
-                opts.fg(fg.as_str());
+                opts.foreground(fg.as_str());
             }
             if let Some(ref bg) = self.bg {
-                opts.bg(bg.as_str());
+                opts.background(bg.as_str());
             }
             opts.bold(self.bold);
             opts.italic(self.italic);

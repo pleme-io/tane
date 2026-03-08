@@ -1,7 +1,8 @@
 //! User command registration helpers.
 
 use nvim_oxi::api;
-use nvim_oxi::types::{CommandArgs, CommandNArgs, CreateCommandOpts};
+use nvim_oxi::api::opts::CreateCommandOpts;
+use nvim_oxi::api::types::{CommandArgs, CommandNArgs};
 
 /// Builder for a Neovim user command.
 pub struct UserCommand {

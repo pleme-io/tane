@@ -4,7 +4,7 @@
 //! This module provides typed access to those values.
 
 use nvim_oxi::api;
-use nvim_oxi::types::Object;
+use nvim_oxi::Object;
 
 /// Configuration reader for a plugin's global variable.
 #[derive(Debug, Clone)]

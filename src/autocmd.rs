@@ -1,7 +1,8 @@
 //! Autocommand registration helpers.
 
 use nvim_oxi::api;
-use nvim_oxi::types::{AutocmdCallbackArgs, CreateAutocmdOpts};
+use nvim_oxi::api::opts::CreateAutocmdOpts;
+use nvim_oxi::api::types::AutocmdCallbackArgs;
 
 /// Builder for a Neovim autocommand.
 pub struct Autocmd {
@@ -70,7 +71,7 @@ impl Autocmd {
     {
         // Create group if specified.
         if let Some(group_name) = &self.group {
-            let group_opts = nvim_oxi::types::CreateAugroupOpts::builder()
+            let group_opts = nvim_oxi::api::opts::CreateAugroupOpts::builder()
                 .clear(false)
                 .build();
             api::create_augroup(group_name, &group_opts)?;

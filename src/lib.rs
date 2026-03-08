@@ -53,4 +53,10 @@ pub enum Error {
     Custom(String),
 }
 
+impl From<nvim_oxi::api::Error> for Error {
+    fn from(err: nvim_oxi::api::Error) -> Self {
+        Self::Oxi(nvim_oxi::Error::from(err))
+    }
+}
+
 pub type Result<T> = std::result::Result<T, Error>;

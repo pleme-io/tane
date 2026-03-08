@@ -3,7 +3,8 @@
 //! Ergonomic builder for setting Neovim keymaps from Rust plugins.
 
 use nvim_oxi::api;
-use nvim_oxi::types::{SetKeymapOpts, Mode};
+use nvim_oxi::api::opts::SetKeymapOpts;
+use nvim_oxi::api::types::Mode;
 
 /// Builder for a Neovim keymap.
 pub struct Keymap {
