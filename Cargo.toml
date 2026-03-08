@@ -1,0 +1,23 @@
+[package]
+name = "tane"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89.0"
+description = "Tane (種) — plugin SDK and framework for building Rust-native Neovim plugins with nvim-oxi"
+homepage = "https://github.com/pleme-io/tane"
+repository = "https://github.com/pleme-io/tane"
+readme = "README.md"
+license = "MIT"
+categories = ["development-tools"]
+keywords = ["neovim", "plugin", "sdk", "framework"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+
+[dependencies]
+nvim-oxi = { version = "0.5", features = ["neovim-0-11"] }
