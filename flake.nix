@@ -2,7 +2,7 @@
   description = "Tane (種) — plugin SDK and framework for building Rust-native Neovim plugins with nvim-oxi";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     substrate = {
       url = "github:pleme-io/substrate";
       inputs.nixpkgs.follows = "nixpkgs";
